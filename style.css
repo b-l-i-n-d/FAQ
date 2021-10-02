@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    background: #7d2ae8;
+}
+
+.accordion {
+    display: flex;
+    max-width: 1010px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 25px;
+    padding: 45px 90px 45px 60px;
+}
+
+.accordion .image-box {
+    height: 360px;
+    width: 300px;
+}
+
+.accordion .image-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.accordion .accordion-text {
+    width: 60%;
+}
+
+.accordion .accordion-text .title {
+    font-size: 35px;
+    font-family: "Ubuntu", sans-serif;
+    color: #7d2ae8;
+    font-weight: 700;
+}
+
+.accordion .accordion-text .faq-text {
+    margin-top: 25px;
+    height: 263px;
+    overflow-y: auto;
+}
+
+.faq-text::-webkit-scrollbar {
+    display: none;
+}
+
+.accordion .accordion-text li {
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.accordion-text li .question-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-text li .question {
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.accordion-text li .arrow {
+    font-size: 20px;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.accordion-text li.show-answer .arrow {
+    transform: rotate(-180deg);
+}
+
+.accordion-text li:hover .arrow,
+.accordion-text li:hover .question {
+    color: #7d2ae8;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.accordion-text li .line {
+    display: block;
+    background: #7d2ae8;
+    height: 1px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.accordion-text li p {
+    width: 92%;
+    font-size: 15px;
+    font-weight: 400;
+    display: none;
+}
+
+.accordion-text li.show-answer p {
+    display: block;
+}
+
+@media (max-width: 984px) {
+    body {
+        padding: 40px 20px;
+    }
+
+    .accordion {
+        max-width: 100%;
+        padding: 45px 90px 45px 60px;
+    }
+
+    .accordion .image-box {
+        height: 360px;
+        width: 220px;
+    }
+
+    .accordion .accordion-text {
+        width: 63%;
+    }
+}
+
+@media (max-width: 820px) {
+    .accordion {
+        flex-direction: column;
+    }
+
+    .accordion .image-box {
+        height: 360px;
+        width: 360px;
+        background: #bb87ff;
+        border-radius: 25px;
+        padding: 10px;
+    }
+
+    .accordion .accordion-text {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 538px) {
+    .accordion {
+        padding: 30px;
+    }
+
+    .accordion-text li p {
+        width: 98%;
+    }
+}
