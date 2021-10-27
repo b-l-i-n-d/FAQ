@@ -3,7 +3,7 @@ let li = document.querySelectorAll('.faq-text li .question-arrow');
 for (var i = 0; i < li.length; i++) {
     li[i].addEventListener('click', (e) => {
         
-        let open = document.querySelector('li.show-answer');
+        let open = document.querySelector('li .show-answer');
         if (open !== null) {
             open.classList.toggle('show-answer');
         };
